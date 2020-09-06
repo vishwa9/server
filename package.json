@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
+    "build": "npm run dev:build-server && dev:build-client",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev:build-server": "webpack --config webpack.server.js --watch",
     "dev:build-client": "webpack --config webpack.client.js --watch"
@@ -32,8 +33,9 @@
     "react-dom": "16.0.0",
     "react-helmet": "5.2.0",
     "react-redux": "5.0.6",
-    "react-router-config": "1.0.0-beta.4",
-    "react-router-dom": "4.2.2",
+    "react-router": "^5.2.0",
+    "react-router-config": "4.4.0-beta.6",
+    "react-router-dom": "^5.2.0",
     "redux": "3.7.2",
     "redux-thunk": "2.2.0",
     "serialize-javascript": "1.4.0",
